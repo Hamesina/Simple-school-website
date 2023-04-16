@@ -1,0 +1,235 @@
+:root {
+    --bluee: rgba(11,127,171,0.8);
+    --blueetra: rgba(11,127,171,0.65);
+    --lblue: #1b8bff;
+    --dblue: #2c3e50;
+    --azure: #F0FFFF;
+    --babyblue: #89BCFF0;
+    --bluegray: #7393B3;
+    --navyblue: #000080;
+    --white: #fff;
+    --black: #3d3d3d;
+    --lightblue:#CAE9F5;
+}
+
+header{
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index: 1000;
+    background:linear-gradient(to right, var(--dblue), var(--bluee));
+    position: sticky;
+    top:0;
+}
+.header .flex{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left:20px;
+
+}
+#circle-btn{
+    color:black;
+}
+.header .flex .logo{
+    margin-left:20px;
+    font-size: 22px;
+    color:white;
+    padding: 10px;
+}
+.header .flex .navba a {
+    margin-left: 20px;
+    color:white;
+    font-size:22px;
+    padding: 20px;
+    font-weight: bolder;
+    text-decoration:none;
+}
+.header .flex .navba a:hover{
+    /*background-color:var(--dblue);*/
+    text-decoration: underline;
+    font-size:25px;
+}
+    .header .flex .navba.active{
+        border: 2px solid var(--dblue);
+        border-radius: 20px;
+        font-size: 22px;
+    }
+
+#menu-btn {
+    cursor: pointer;
+    color: var(--dblue);
+    font-size: 22px;
+    display: none;
+    margin-right:20px;
+}
+.abou{
+    margin-bottom:50px;
+    margin-top:30px;
+}
+.abou .row{
+    display:flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.abou .row .image{
+    flex:1 1 400px;
+}
+.abou .row .image img{
+    width:80%;
+    height:80%;
+    margin-left:100px;
+    display:flex;
+    justify-content:center ;
+}
+.abou .row .content{
+    text-align: center;
+    flex:1 1 400px;
+    display:flex;
+    justify-content:center ;
+}
+.abou .row .content h3{
+    font-size:30px;
+    color:var(--bluee);
+}
+.abou .row .content p{
+    padding: 10px 0;
+    line-height: 2;
+    font-size: 20px;
+    color:var(--dblue);
+    display:flex;
+    justify-content:center ;
+}
+footer{
+    width:100%;
+    position:absolute;
+    /*bottom:0;*/
+    background:linear-gradient(to right, var(--dblue), var(--lblue));
+    color:var(--azure);
+    padding: 30px 0 20px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+}
+.row-f{
+    width: 85%;
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    justify-content: space-between;
+}
+.col-f{
+    flex-basis:30%;
+    padding:10px;
+}
+/*.col-f:nth-child(2), .col:nth-child(3){
+    flex-basis:15%;
+}*/
+.inner{
+    display: flex;
+    flex-basis: 20%;
+    gap: 15px;
+}
+.col-f h3{
+    width: fit-content;
+    position: relative;
+    font-size:20px;
+    margin-bottom: 10px;
+}
+.email-id{
+    width: fit-content;
+    border-bottom:1px solid #ccc;
+    margin:20px 0;
+}
+.col-f ul li{
+    list-style:none;
+    margin-bottom: 8px;
+}
+.col-f ul li a{
+    text-decoration:none;
+    color:var(--white);
+}
+.col-f ul li a:hover {
+        font-size: 17px;
+        transition:.5s;
+    }
+.col-f form{
+    margin-top: 20px;
+    padding-bottom:15px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+.col-f form .fa-solid{
+    font-size:22px;
+    margin-right: 10px;
+}
+.col-f form input{
+    width:100%;
+    background:transparent;
+    color:white;
+    border:0;
+    outline:none;
+    font-size:18px;
+}
+.col-f form button{
+    background:transparent;
+    border:0;
+    outline:none;
+    cursor:pointer;
+}
+.col-f form button .fas{
+    font-size:20px;
+    color:white;
+}
+.social-icons .fab,.fas,.fa-solid{
+    width: 40px;
+    height: 40px;
+    /*border-radius: 50%;*/
+    text-align:center;
+    line-height:40px;
+    font-size:20px;
+    color:var(--azure);
+    background-color:transparent;
+    margin-right: 15px;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+@media(max-width:768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+    #menu-btn.fa-times {
+        transform: rotate(90deg);
+    }
+
+    .header .flex .navba {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        border-top: .1rem solid black;
+        border-bottom: .1rem solid black;
+        background-color: var(--dblue);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+        .header .flex .navba.active {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .header .flex .navba a {
+            display: block;
+            margin: .2rem;
+        }
+        }
